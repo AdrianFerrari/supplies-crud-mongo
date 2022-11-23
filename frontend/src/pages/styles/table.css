@@ -1,0 +1,89 @@
+.supplies-data-base {
+    flex-grow: 2;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px grey;
+}
+
+header {
+    display: flex;
+    align-items: stretch;
+}
+
+.mongo-logo {
+    background-image: url("../../icons/mongodb_icon.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+}
+
+.supplies-data-base h1 {
+    color: rgb(77, 179, 61);
+}
+
+table * {
+    margin: 0;
+}
+
+thead {
+    background-color: rgb(133, 133, 255);
+    color: white;
+}
+
+th {
+    padding: .5em 0;
+}
+
+.tablerow-color {
+    background-color: rgb(220, 220, 255);
+}
+
+.edit-btn,
+.delete-btn {
+    box-sizing: border-box;
+    color: white;
+    border: none;
+    padding: .5em 0em;
+    width: 6em;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: rgb(77, 158, 77);
+}
+
+.delete-btn {
+    background-color: rgb(153, 7, 7);
+}
+
+.table-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (min-width:720px){
+    .table-btn {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .table-btn {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 370px) {
+    .table-btn {
+        flex-direction: column;
+    }
+}
