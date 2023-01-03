@@ -4,7 +4,10 @@ import "./styles/form.css";
 import { useSupplies } from "../context/suppliesContext";
 
 function SuppliesFormPost() {
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({
+        name: "",
+        number: "",
+    });
     const { getSupplies } = useSupplies();
 
     function handleChange(event) {
@@ -22,13 +25,14 @@ function SuppliesFormPost() {
         event.preventDefault();
         await postSuppliesRequests(formData);
         await getSupplies();
+        setFormData(() => ({name:"", number:""}))
     }
 
     return (
         <div className="supplies-form">
             <h1>Supply Form</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="nombre">Name: </label>
                 <input
                     id="nombre"
                     type="text"
