@@ -10,7 +10,6 @@ function SuppliesFormEdit() {
     const navigate = useNavigate();
     const { name, number, _id } = location.state;
     const [formData, setFormData] = useState({ name: "", number: 0 });
-    console.log(formData);
 
     function handleChange(event) {
         const name = event.target.name;

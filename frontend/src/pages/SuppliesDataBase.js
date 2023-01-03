@@ -6,7 +6,6 @@ import { deleteSuppliesRequests } from "../utils/api";
 
 function SuppliesDataBase() {
     const { supplies, getSupplies } = useSupplies();
-    console.log(supplies);
 
     const tableHTML = supplies.map((supply, index) => {
         return (
