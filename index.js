@@ -1,5 +1,5 @@
 import express from "express";
-import suppliesRoutes from "./routes/supplies.routes.js";
+import suppliesRoutes from "./backend/routes/supplies.routes.js";
 import mongoose from "mongoose";
 import cors from "cors"
 import dotenv from "dotenv";
@@ -18,12 +18,12 @@ const port = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
-app.use(express.static(path.join(__dirname, "..", "frontend", "build")))
+app.use(express.static(path.join(__dirname, "frontend", "build")))
 
 //routes
 app.use(suppliesRoutes);
 app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"))
+    res.sendFile(path.join(__dirname, "frontend", "build", "index.html"))
 })
 
 //mongoose
