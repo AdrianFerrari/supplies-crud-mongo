@@ -4,9 +4,11 @@ import "./styles/home.css"
 
 function Home() {
     return (
-        <div className="home">
-            <Outlet />
-            <SuppliesDataBase />
+        <div className="home-wrapper">
+            <div className="home">
+                <Outlet />
+                <SuppliesDataBase />
+            </div>
         </div>
     );
 }

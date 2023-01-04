@@ -1,7 +1,15 @@
+.home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(158, 158, 158);
+}
+
 .home {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: stretch;
     gap:20px;
 }
@@ -9,7 +17,7 @@
 @media (min-width: 600px) {
     .home {
         flex-direction: row;
-        max-width: 800px;
+        width: 800px;
         margin: auto;
         gap: 5%;
     }
