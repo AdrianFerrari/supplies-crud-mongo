@@ -1,6 +1,6 @@
 # CRUD proyect
 
-Basic app than can manipulate a mongo data base
+Basic app than can manipulate a mongo data base.
 
 ## Screenshot
 
